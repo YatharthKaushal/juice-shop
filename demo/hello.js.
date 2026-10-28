@@ -1,0 +1,2 @@
+const { exec } = require('child_process')
+module.exports = (req, res) => exec('ls ' + req.query.dir, (e, out) => res.send(out))
